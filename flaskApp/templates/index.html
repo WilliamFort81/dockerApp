@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Title for the page -->
+    <title>Flask App</title>
+
+    <!-- CSS Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <!-- Jinjer templating for css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script>
+        // Get flask data questions and answered
+        var questions = {{ questions|tojson }};
+        var resultArray = {{ resultArray|tojson }};
+    </script>
+    </head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Flask App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Container for the input for the chatbot -->
+    <div id="chatbotInputContainer">
+        <!-- Textbox input with send button-->
+        <!-- Bootstrap styling for the textbox -->
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Enter your message" id="chatbotInput">
+            <!-- Button to send, will soon be replaced with a request which will run python functions -->
+            <button class="btn btn-outline-secondary" type="button" id="chatbotSend">Send</button>
+        </div>
+    </div>
+    <!-- Div for the text input and the chatbot-->
+    <div class="container">
+        <div class="row justify-content-center" id="cardContainer">
+           
+            
+        </div>
+    </div>
+    <div id="chatbotContainer">
+        <!-- Div for the chatbot -->
+    </div>
+
+    <!-- JavaScript links-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+input:focus{
+    outline: none;
+}
+#chatbotInputContainer {
+    display: block;
+  width: 80%;
+  max-width: 50rem;
+  margin: 3rem auto;
+  /* Rounded golden border */
+    border: 0.2rem solid #FFD700;
+    border-radius: 0.5rem;
+    background: #fff;
+
+}
+#chatbotContainer{
+    /* padding left and right */
+    padding: 0 1rem;
+    /* center text */
+    text-align: center;
+
+}
+
+.chatbotMessage{
+    margin: 40px;
+}
+.userMessage{
+    color: blue;
+    margin: none !important;
+}
+.chatbot{
+    /* Golden border */
+    border: 0.2rem solid #746200;
+    /* Rounded golden border */
+    border-radius: 0.5rem;
+    /* Padding */
+
+    
+}
+
+#cardContainer .card{
+    display:inline-block;
+}
+#cardContainer{
+    flex-wrap: wrap;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .centered-div {
+    width: 50%;
+    margin: 10px;
+    padding: 5px;
+ }
